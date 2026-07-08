@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OptiCrop</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">OptiCrop</div>
+    <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#predict">FindCrop</a></li>
+    </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="hero">
+    <div class="overlay">
+        <h1 class="hero-title">OptiCrop Agricultural Optimisation</h1>
+        <p class="hero-text">
+            The main purpose of OptiCrop is to develop a system that uses
+            data-driven insights to optimize agricultural production.
+        </p>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+    <div class="about-container">
+
+        <!-- LEFT TEXT -->
+        <div class="about-text">
+            <h2>Smart Agricultural Optimization Using Machine Learning</h2>
+
+            <p>
+                OptiCrop is an intelligent crop recommendation system designed
+                to assist farmers in selecting the most suitable crops based on
+                soil nutrients, environmental conditions, and climate data.
+            </p>
+
+            <p>
+                By analyzing parameters such as Nitrogen (N), Phosphorus (P),
+                Potassium (K), temperature, humidity, pH, and rainfall,
+                OptiCrop uses machine learning models to provide accurate
+                and reliable crop suggestions.
+            </p>
+
+            <p>
+                The project revolutionizes agriculture by providing actionable insights that help farmers optimize crop selection and cultivation practices, improving productivity, reducing resource waste, and enabling data-driven decisions for sustainable farming.    
+            </p>
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="about-image">
+            <img src="/static/about-farm.png" alt="Smart Farming">
+        </div>
+
+    </div>
+</section>
+
+<!-- FIND YOUR CROP -->
+<section id="predict" class="predict">
+    <div class="card">
+        <h2 class="title">Find Your Crop</h2>
+        <p class="subtitle">
+            Enter soil and climate variables to identify the optimal crop.
+        </p>
+
+        <form id="predictionForm">
+
+            <!-- Soil Nutrients -->
+            <div class="row">
+                <div class="col">
+                    <label for="N">Nitrogen</label>
+                    <input type="number" id="N" name="N" required>
+                </div>
+                <div class="col">
+                    <label for="P">Phosphorus</label>
+                    <input type="number" id="P" name="P" required>
+                </div>
+                <div class="col">
+                    <label for="K">Potassium</label>
+                    <input type="number" id="K" name="K" required>
+                </div>
+            </div>
+
+            <!-- Climate Conditions -->
+            <div class="row">
+                <div class="col">
+                    <label for="temperature">Temperature (°C)</label>
+                    <input type="number" id="temperature" name="temperature" step="any" required>
+                </div>
+                <div class="col">
+                    <label for="humidity">Humidity (%)</label>
+                    <input type="number" id="humidity" name="humidity" step="any" required>
+                </div>
+            </div>
+
+            <!-- Soil Properties -->
+            <div class="row">
+                <div class="col">
+                    <label for="ph">pH</label>
+                    <input type="number" id="ph" name="ph" step="any" required>
+                </div>
+                <div class="col">
+                    <label for="rainfall">Rainfall (mm)</label>
+                    <input type="number" id="rainfall" name="rainfall" step="any" required>
+                </div>
+            </div>
+
+            <button type="submit">Identify Best Crop</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+</section>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
