@@ -72,7 +72,11 @@ section.active {
 
 /* HERO */
 .hero {
-    background: url('/static/farm.png') center/cover no-repeat;
+    /* background: url('/static/farm.png') center/cover no-repeat;  another version */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
     position: relative;
 }
 

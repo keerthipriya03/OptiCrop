@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OptiCrop</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+        .hero {
+            background: url("{{ url_for('static', filename='farm.png') }}") center/cover no-repeat;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -58,7 +65,8 @@
 
         <!-- RIGHT IMAGE -->
         <div class="about-image">
-            <img src="/static/about-farm.png" alt="Smart Farming">
+            <!-- <img src="/static/about-farm.png" alt="Smart Farming"> -->
+             <img src="{{ url_for('static', filename='about-farm.png') }}">
         </div>
 
     </div>
@@ -121,7 +129,7 @@
     </div>
 </section>
 
-<script src="/static/script.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
 </html>
